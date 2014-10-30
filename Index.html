@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Price Estimator</title>
+  <link REL="StyleSheet" TYPE="text/css" HREF="css/sheet.css">
+  <script src="js/Brains.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div>
+  <h1>Cost Estimator</h1>
+  <form>
+  <input type= "numbers" id="x" placeholder = "Length (mm) - Max 230" /><br />
+  <input type= "numbers" id="y" placeholder = "Width (mm) - Max 180"/><br />
+  <input type= "numbers" id="z" placeholder = "Height (mm) - Max 330"/><br />
+    
+  <!--<div id="zContain">  
+  <input type="checkbox" id="zAxis">Z Axis Optimization<br>
+    </div> -->
+    
+  <select id="choice" >
+        <option value = "1">Option 1</option>
+        <option value = "2">Option 2</option>
+     <option value = "3">Option 3</option>
+    </select>
+    <br/>
+    <br/>
+    <input id= "est" type="button" value = "Estimate" onclick= "calculator()","myContainer()"/>
+    <input id= "reset" type="reset" value = "Reset"/>
+    </form>
+  <h1 id="result"> = </h1>
+  <h3 id="container"></h3>
+    </div>
+
+  </body>
+</html>
