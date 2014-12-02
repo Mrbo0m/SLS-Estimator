@@ -1,3 +1,36 @@
+//Define inputs, check zAxis
+//return array of values x,y,z
+function retrVals() {
+  var coOrds = {};
+  coOrds.x = Number(document.getElementById("x").value);
+  coOrds.y = Number(document.getElementById("y").value);
+  coOrds.z = Number(document.getElementById("z").value);
+  var check = document.getElementById("zAxis").checked;
+  if (check) {
+    var min = Math.min(coOrds.x,coOrds.y,coOrds.z);
+    var temp = coOrds.z;
+    if (min !== coOrds.z) {
+      if (min === coOrds.x) {
+        coOrds.z = coOrds.x
+        coOrds.x = temp
+        return [coOrds.x,coOrds.y,coOrds.z]
+      }
+      else {
+        coOrds.z = coOrds.y
+        coOrds.y = temp
+        return [coOrds.x,coOrds.y,coOrds.z]
+      }
+    }
+    else {
+      return [coOrds.x,coOrds.y,coOrds.z]
+    }
+    return [coOrds.x,coOrds.y,coOrds.z]
+  }
+  else {
+    return [coOrds.x,coOrds.y,coOrds.z]
+  }
+};
+
 //Calc with Switch//
 function calculator(){
         var x = Number(document.getElementById("x").value);
