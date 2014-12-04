@@ -17,23 +17,20 @@
   <input type= "numbers" id="y" placeholder = "Width (mm) - Max 180"/><br />
   <input type= "numbers" id="z" placeholder = "Height (mm) - Max 330"/><br />
     
-  <!--<div id="zContain">  
+  <div id="zContain">  
   <input type="checkbox" id="zAxis">Z Axis Optimization<br>
-    </div> -->
+    </div>
     
   <select id="choice" >
-        <option value = "1">Option 1</option>
-        <option value = "2">Option 2</option>
+    <option value = "1">Option 1</option>
+    <option value = "2">Option 2</option>
      <option value = "3">Option 3</option>
-    </select>
+  </select>
     <br/>
     <br/>
-    <input id= "est" type="button" value = "Estimate" onclick= "calculator()","myContainer()"/>
+    <input id= "est" type="button" value = "Estimate" onclick= "calculator(retrVals())"/>
     <input id= "reset" type="reset" value = "Reset"/>
     </form>
   <h1 id="result"> = </h1>
   <h3 id="container"></h3>
-    </div>
-
-  </body>
-</html>
+  </div>
